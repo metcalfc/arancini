@@ -70,6 +70,11 @@ unsafe = true
 
 [markup]
 
+  # Syntax highlighting - use CSS classes instead of inline styles
+  # This allows the theme's base16 colors to control syntax highlighting
+  [markup.highlight]
+    noClasses = false
+
   # Table of contents
   # Add toc = true to content front matter to enable
   [markup.tableOfContents]
