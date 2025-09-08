@@ -1,0 +1,141 @@
+/* Fix overflow when config markup.highlight.lineNos is true */
+/* See https://github.com/joeroe/risotto/issues/41 - inherited from risotto */
+.highlight div {
+	overflow-x: auto;
+}
+
+/* Comprehensive Chroma syntax highlighting using arancini's base16 colors */
+/* Background */
+.chroma {
+  background-color: var(--inner-bg);
+  color: var(--fg);
+}
+/* Error */
+.chroma .err {
+  color: var(--fg);
+  background-color: var(--base08);
+}
+/* LineLink */
+.chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* LineHighlight */
+.chroma .hl {
+  background-color: var(--off-bg);
+}
+/* LineNumbersTable */
+.chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em;
+  color: var(--muted);
+}
+/* LineNumbers */
+.chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em;
+  color: var(--muted);
+}
+/* Line */
+.chroma .line {
+  display: flex;
+}
+/* Keywords - Purple */
+.chroma .k { color: var(--base0E); }
+.chroma .kc { color: var(--base0E); }
+.chroma .kd { color: var(--base0E); }
+.chroma .kn { color: var(--base0E); }
+.chroma .kp { color: var(--base0E); }
+.chroma .kr { color: var(--base0E); }
+.chroma .kt { color: var(--base0E); }
+/* Names and identifiers - Red */
+.chroma .na { color: var(--base08); }
+.chroma .nc { color: var(--base08); }
+.chroma .no { color: var(--base09); }
+.chroma .nd { color: var(--base0D); }
+.chroma .ni { color: var(--base08); }
+.chroma .nl { color: var(--base08); font-weight: bold; }
+.chroma .nn { color: var(--base08); }
+.chroma .nx { color: var(--fg); }
+.chroma .nt { color: var(--base08); }
+/* Built-ins - Yellow */
+.chroma .nb { color: var(--base0A); }
+.chroma .bp { color: var(--base0A); }
+/* Variables - Red */
+.chroma .nv { color: var(--base08); }
+.chroma .vc { color: var(--base08); }
+.chroma .vg { color: var(--base08); }
+.chroma .vi { color: var(--base08); }
+.chroma .vm { color: var(--base08); }
+/* Functions - Blue */
+.chroma .nf { color: var(--base0D); }
+.chroma .fm { color: var(--base0D); }
+/* Strings - Green */
+.chroma .s { color: var(--base0B); }
+.chroma .sa { color: var(--base0B); }
+.chroma .sb { color: var(--base0B); }
+.chroma .sc { color: var(--base0B); }
+.chroma .dl { color: var(--base0B); }
+.chroma .sd { color: var(--off-fg); }
+.chroma .s2 { color: var(--base0B); }
+.chroma .se { color: var(--base0C); }
+.chroma .sh { color: var(--base0B); }
+.chroma .si { color: var(--base0C); }
+.chroma .sx { color: var(--base0B); }
+.chroma .sr { color: var(--base0C); }
+.chroma .s1 { color: var(--base0B); }
+.chroma .ss { color: var(--base0C); }
+/* Numbers - Orange */
+.chroma .m { color: var(--base09); }
+.chroma .mb { color: var(--base09); }
+.chroma .mf { color: var(--base09); }
+.chroma .mh { color: var(--base09); }
+.chroma .mi { color: var(--base09); }
+.chroma .il { color: var(--base09); }
+.chroma .mo { color: var(--base09); }
+/* Operators - Cyan */
+.chroma .o { color: var(--base0C); }
+.chroma .ow { color: var(--base0E); }
+/* Punctuation - Default */
+.chroma .p { color: var(--fg); }
+/* Comments - Muted */
+.chroma .c { color: var(--off-fg); }
+.chroma .ch { color: var(--off-fg); }
+.chroma .cm { color: var(--off-fg); }
+.chroma .c1 { color: var(--off-fg); }
+.chroma .cs { color: var(--off-fg); }
+.chroma .cp { color: var(--base0E); }
+.chroma .cpf { color: var(--base0E); }
+/* GenericDeleted */
+.chroma .gd { color: var(--base08); background-color: var(--off-bg); }
+/* GenericEmph */
+.chroma .ge { font-style: italic; }
+/* GenericInserted */
+.chroma .gi { color: var(--base0B); background-color: var(--off-bg); }
+/* GenericOutput */
+.chroma .go { color: var(--fg); }
+/* GenericUnderline */
+.chroma .gl { text-decoration: underline; }
+/* TextWhitespace */
+.chroma .w { color: var(--muted); }
