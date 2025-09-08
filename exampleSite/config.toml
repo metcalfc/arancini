@@ -1,8 +1,8 @@
-baseURL = "https://risotto.joeroe.io"
-theme = "risotto"
-title = "risotto demo"
-author = "Joe Roe"
-copyright = "© [Joe Roe](https://joeroe.io) & [risotto contributors](https://github.com/joeroe/risotto/graphs/contributors)."
+baseURL = "https://example.com"
+theme = "arancini"
+title = "arancini demo"
+author = "Example Author"
+copyright = "© [arancini contributors](https://github.com/metcalfc/arancini/graphs/contributors)."
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
@@ -20,14 +20,14 @@ pagerSize = 3
 noindex = false
 
 [params.theme]
-palette = "base16-dark"
+palette = "nord"
 
 # Sidebar: about/bio
 [params.about]
-title = "risotto"
-description = "A [hugo](https://gohugo.io) theme inspired by terminal ricing."
+title = "arancini"
+description = "A [hugo](https://gohugo.io) theme with full base16 color scheme support."
 # unicode/emoji logo:
-logo = "🍚"
+logo = "🧆"
 # or use an image:
 #logo_image = "images/rice.svg"
 
@@ -39,7 +39,7 @@ logo = "🍚"
 [[params.socialLinks]]
 icon = "fa-brands fa-github"
 title = "GitHub"
-url = "https://github.com/joeroe/risotto"
+url = "https://github.com/metcalfc/arancini"
 
 [[params.socialLinks]]
 icon = "fa-solid fa-envelope"
@@ -47,9 +47,9 @@ title = "Email"
 url = "mailto:example@example.com"
 
 [[params.socialLinks]]
-icon = "ai ai-orcid"
-title = "ORCID"
-url = "https://orcid.org/0000-0001-2345-6789"
+icon = "fa-brands fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/example"
 
 [menu]
 
@@ -70,10 +70,8 @@ unsafe = true
 
 [markup]
 
-  # Syntax highlighting - use CSS classes instead of inline styles
-  # This allows the theme's base16 colors to control syntax highlighting
+  # Syntax highlighting - default inline styles
   [markup.highlight]
-    noClasses = false
 
   # Table of contents
   # Add toc = true to content front matter to enable

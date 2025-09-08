@@ -1,14 +1,12 @@
-# 🍚 risotto
+# 🧆 arancini
 
-risotto is a minimalist, responsive [hugo](https://gohugo.io) theme inspired by terminal ricing aesthetics.
+arancini is a minimalist, responsive [hugo](https://gohugo.io) theme with full base16 color scheme support and enhanced syntax highlighting. Based on [risotto](https://github.com/joeroe/risotto) by [Joe Roe](https://joeroe.io).
 
-[![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-risotto-blue?logo=hugo)](https://themes.gohugo.io/themes/risotto/)
-[![Version](https://img.shields.io/badge/semver-v0.4.0-blue)](https://semver.org)
-![hugo build status](https://github.com/joeroe/risotto/actions/workflows/hugo-build-exampleSite.yml/badge.svg)
-[![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Frisotto.joeroe.io)](https://validator.nu/?doc=https%3A%2F%2Frisotto.joeroe.io)
-![Code size](https://img.shields.io/github/languages/code-size/joeroe/risotto)
+[![Version](https://img.shields.io/badge/semver-v1.0.0-blue)](https://semver.org)
+![hugo build status](https://github.com/metcalfc/arancini/actions/workflows/hugo-build-exampleSite.yml/badge.svg)
+![Code size](https://img.shields.io/github/languages/code-size/metcalfc/arancini)
 
-![Screenshot of the risotto theme](https://raw.githubusercontent.com/joeroe/risotto/master/images/screenshot.png)
+![Screenshot of the arancini theme](https://raw.githubusercontent.com/metcalfc/arancini/main/images/screenshot.png)
 
 ## Features
 
@@ -16,14 +14,16 @@ risotto is a minimalist, responsive [hugo](https://gohugo.io) theme inspired by 
 * Plain CSS – no frameworks, no preprocessors, just simple and easy-to-customise stylesheets
 * Uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout) for native responsive behaviour without arbitrary breakpoints
 * Comes with [16 built-in colour schemes](#colour-schemes) based on popular terminal themes plus the ability to use custom themes using the [base16 system](https://github.com/monicfenga/base16-styles)
+* **Enhanced syntax highlighting** that automatically adapts to any base16 color scheme
+* **Full base16 variable support** for consistent theming across all elements
 
 ## Install
 
-The easiest way to install the theme is to [download the latest release](https://github.com/joeroe/risotto/releases) and extract it to your project's `themes/` directory.
+The easiest way to install the theme is to [download the latest release](https://github.com/metcalfc/arancini/releases) and extract it to your project's `themes/` directory.
 You can also clone this repository into your site's `themes` directory and checkout the latest release:
 
 ```shell
-git clone https://github.com/joeroe/risotto themes/risotto && cd themes/risotto
+git clone https://github.com/metcalfc/arancini themes/arancini && cd themes/arancini
 git checkout $(git tag -l | grep '^v[0-9.]*$' | sort -V | tail -n 1)
 ```
 
@@ -35,23 +35,28 @@ In that case, you can add the theme as a [git submodule](https://git-scm.com/boo
 If you installed the theme using `git clone`, pull the repository to get the latest version:
 
 ```shell
-cd themes/risotto
+cd themes/arancini
 git pull
 ```
 
-Otherwise, simply [download the latest release](https://github.com/joeroe/risotto/releases) and extract it to your project's `themes/` directory, replacing the old version.
+Otherwise, simply [download the latest release](https://github.com/metcalfc/arancini/releases) and extract it to your project's `themes/` directory, replacing the old version.
 
 ## Configure
 
-To use the theme, add `theme = 'risotto'` to your site's `hugo.toml`, or `theme: risotto` to your `hugo.yaml`.
+To use the theme, add `theme = 'arancini'` to your site's `hugo.toml`, or `theme: arancini` to your `hugo.yaml`.
 
 See `exampleSite/config.toml` for the theme-specific parameters you need to add to your site's `hugo.toml` or `hugo.yaml` to configure the theme.
 
 ### Colour schemes
 
-risotto uses the [base16 framework](https://github.com/chriskempson/base16) to define colour schemes that can be used with the `theme.palette` parameter.
-A selection of 16 palettes (10 dark, 6 light) are bundled with the theme: `apprentice`, `base16-dark`, `base16-light`, `dracula`, `gruvbox-dark`, `gruvbox-light`, `material`, `papercolor-dark`, `papercolor-light`, `solarized-dark`, `solarized-light`, `tender`, `tokyo-night-dark`, `tokyo-night-light`, `windows-95` and `windows-95-light`.
-The default is `base16-dark`.
+arancini uses the [base16 framework](https://github.com/chriskempson/base16) to define colour schemes that can be used with the `theme.palette` parameter.
+A selection of 24 palettes (16 dark, 8 light) are bundled with the theme:
+
+**Dark themes:** `apprentice`, `base16-dark`, `catppuccin-mocha`, `dracula`, `github-dark`, `gruvbox-dark`, `material`, `nord`, `onedark`, `papercolor-dark`, `solarized-dark`, `tender`, `tokyo-night-dark`, `windows-95`
+
+**Light themes:** `base16-light`, `catppuccin-latte`, `github-light`, `gruvbox-light`, `nord-light`, `onelight`, `papercolor-light`, `solarized-light`, `tokyo-night-light`, `windows-95-light`
+
+The default is `nord`.
 
 <!-- TODO: add screenshots of default themes -->
 
@@ -91,7 +96,7 @@ For example:
 
 ## Favicon
 
-risotto will automatically use favicons placed in the `static/` directory.
+arancini will automatically use favicons placed in the `static/` directory.
 The following files will be detected and included in your site's `<head>` section:
 
 * `favicon.ico`
@@ -101,8 +106,10 @@ The following files will be detected and included in your site's `<head>` sectio
 * `site.webmanifest`
 
 You can generate these from an image or emoji using [favicon.io](https://favicon.io/) or a similar service.
-They must be placed directly under your site's `static/` directory, i.e. not in in a subdirectory or `themes/risotto/static/`.
+They must be placed directly under your site's `static/` directory, i.e. not in in a subdirectory or `themes/arancini/static/`.
 
 ## Acknowledgements
 
-The 'cooked rice' emoji used as a favicon for the example site was created by the [Twemoji project](https://twemoji.twitter.com/) and is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This theme is based on [risotto](https://github.com/joeroe/risotto) by [Joe Roe](https://joeroe.io). The arancini theme adds enhanced syntax highlighting with full base16 color scheme support.
+
+The 'cooked rice' emoji originally used as a favicon for the risotto theme was created by the [Twemoji project](https://twemoji.twitter.com/) and is licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).

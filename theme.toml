@@ -1,15 +1,21 @@
-name = "risotto"
+name = "arancini"
 license = "MIT"
-licenselink = "https://github.com/joeroe/risotto/blob/master/LICENSE"
-description = "A minimalist, responsive theme inspired by terminal ricing aesthetics."
+licenselink = "https://github.com/metcalfc/arancini/blob/main/LICENSE"
+description = "A minimalist, responsive Hugo theme with full base16 color scheme support and enhanced syntax highlighting. Forked from risotto by Joe Roe."
 
-homepage = "https://github.com/joeroe/risotto"
-demosite = "https://risotto.joeroe.io"
+homepage = "https://github.com/metcalfc/arancini"
+demosite = "https://justademo.sh"
 
-tags = ["responsive", "minimal", "dark mode"]
-features = []
+tags = ["responsive", "minimal", "dark mode", "base16", "syntax highlighting"]
+features = ["base16 color schemes", "enhanced syntax highlighting", "responsive design"]
 
 [author]
-  name = "Joe Roe"
-  homepage = "https://joeroe.io"
+  name = "Chad Metcalf"
+  homepage = "https://justademo.sh"
+
+# Original theme credit
+[original]
+  name = "risotto"
+  author = "Joe Roe"
+  homepage = "https://github.com/joeroe/risotto"
 
