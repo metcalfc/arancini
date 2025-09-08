@@ -1,0 +1,22 @@
+/* github light
+ * Based on GitHub's light color scheme
+ */
+
+:root {
+	--base00: #ffffff;
+	--base01: #f6f8fa;
+	--base02: #f3f4f6;
+	--base03: #d1d9e0;
+	--base04: #656d76;
+	--base05: #24292f;
+	--base06: #1b1f24;
+	--base07: #0e1116;
+	--base08: #d1242f;
+	--base09: #d18616;
+	--base0A: #bf8700;
+	--base0B: #1a7f37;
+	--base0C: #3192aa;
+	--base0D: #0969da;
+	--base0E: #8250df;
+	--base0F: #a40e26;
+}

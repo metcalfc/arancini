@@ -1,0 +1,22 @@
+/* github dark
+ * Based on GitHub's dark color scheme
+ */
+
+:root {
+	--base00: #0d1117;
+	--base01: #161b22;
+	--base02: #21262d;
+	--base03: #30363d;
+	--base04: #484f58;
+	--base05: #b1bac4;
+	--base06: #c9d1d9;
+	--base07: #f0f6fc;
+	--base08: #f85149;
+	--base09: #f0883e;
+	--base0A: #d29922;
+	--base0B: #56d364;
+	--base0C: #39c5cf;
+	--base0D: #58a6ff;
+	--base0E: #bc8cff;
+	--base0F: #bd561d;
+}

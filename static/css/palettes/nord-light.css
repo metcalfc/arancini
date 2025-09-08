@@ -1,0 +1,23 @@
+/* nord light
+ * Based on the Nord Color Palette by arcticicestudio
+ * Bright ambiance following Nord's official color usage guidelines
+ */
+
+:root {
+	--base00: #eceff4; /* nord6 - background for bright themes */
+	--base01: #e5e9f0; /* nord5 - state animations and line highlighting */
+	--base02: #d8dee9; /* nord4 - elevated UI elements */
+	--base03: #4c566a; /* nord3 - comments (same as dark) */
+	--base04: #434c5e; /* nord2 - subtle UI text elements */
+	--base05: #3b4252; /* nord1 - subtle UI text elements */
+	--base06: #2e3440; /* nord0 - base text and reserved syntax */
+	--base07: #8fbcbb; /* nord7 - frost accent */
+	--base08: #bf616a; /* nord11 - red (same as dark) */
+	--base09: #d08770; /* nord12 - orange (same as dark) */
+	--base0A: #ebcb8b; /* nord13 - yellow (same as dark) */
+	--base0B: #a3be8c; /* nord14 - green (same as dark) */
+	--base0C: #88c0d0; /* nord8 - cyan (same as dark) */
+	--base0D: #81a1c1; /* nord9 - blue (same as dark) */
+	--base0E: #b48ead; /* nord15 - magenta (same as dark) */
+	--base0F: #5e81ac; /* nord10 - dark blue (same as dark) */
+}
