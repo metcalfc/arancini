@@ -19,27 +19,65 @@ arancini is a minimalist, responsive [hugo](https://gohugo.io) theme with full b
 
 ## Install
 
-The easiest way to install the theme is to [download the latest release](https://github.com/metcalfc/arancini/releases) and extract it to your project's `themes/` directory.
-You can also clone this repository into your site's `themes` directory and checkout the latest release:
+### Method 1: Hugo Modules (Recommended)
+
+Initialize your site as a Hugo module:
 
 ```shell
-git clone https://github.com/metcalfc/arancini themes/arancini && cd themes/arancini
-git checkout $(git tag -l | grep '^v[0-9.]*$' | sort -V | tail -n 1)
+hugo mod init github.com/yourusername/yoursite
 ```
 
-Note that this will not work if your site is itself a git repository.
-In that case, you can add the theme as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules), but this is not recommended due to the difficulty of tracking a specific release.
+Add arancini to your `hugo.toml` or `config.toml`:
+
+```toml
+[module]
+  [[module.imports]]
+    path = "github.com/metcalfc/arancini"
+```
+
+Hugo will automatically download the theme when you build your site.
+
+### Method 2: Git Submodule
+
+Add arancini as a git submodule:
+
+```shell
+git submodule add https://github.com/metcalfc/arancini.git themes/arancini
+git submodule update --init --recursive
+```
+
+### Method 3: Git Clone
+
+Clone the repository into your `themes` directory:
+
+```shell
+git clone https://github.com/metcalfc/arancini themes/arancini
+```
+
+**Note:** This method works best for non-git sites or when you want to modify the theme directly.
+
+### Method 4: Download Release
+
+Download the [latest release](https://github.com/metcalfc/arancini/releases) and extract it to your project's `themes/arancini/` directory.
 
 ## Update
 
-If you installed the theme using `git clone`, pull the repository to get the latest version:
-
+**Hugo Modules:**
 ```shell
-cd themes/arancini
-git pull
+hugo mod get -u
 ```
 
-Otherwise, simply [download the latest release](https://github.com/metcalfc/arancini/releases) and extract it to your project's `themes/` directory, replacing the old version.
+**Git Submodule:**
+```shell
+git submodule update --remote --merge
+```
+
+**Git Clone:**
+```shell
+cd themes/arancini && git pull
+```
+
+**Download:** Replace the theme directory with the latest release.
 
 ## Configure
 
