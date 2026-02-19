@@ -1,0 +1,17 @@
+# {{ .Site.Title }}
+
+{{ with .Site.Params.about }}> {{ .description }}
+{{ end }}
+## Pages
+
+{{ range .Site.RegularPages }}
+{{- $md := .OutputFormats.Get "markdown" }}
+- [{{ .Title }}]({{ with $md }}{{ .Permalink }}{{ end }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
+
+## Sections
+
+{{ range .Site.Sections }}
+{{- $md := .OutputFormats.Get "markdown" }}
+- [{{ .Title }}]({{ with $md }}{{ .Permalink }}{{ end }})
+{{- end }}

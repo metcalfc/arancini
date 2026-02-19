@@ -1,0 +1,22 @@
+# {{ .Site.Title }}
+
+{{ with .Site.Params.about }}> {{ .description }}
+{{ end }}
+{{ range $i, $p := .Site.RegularPages }}
+{{- if $i }}
+
+---
+
+{{ end }}
+# {{ $p.Title }}
+
+- URL: {{ $p.Permalink }}
+{{- with $p.Date }}
+- Date: {{ .Format "2006-01-02" }}
+{{- end }}
+{{- with $p.Params.author }}
+- Author: {{ . }}
+{{- end }}
+
+{{ $p.RawContent }}
+{{- end }}
