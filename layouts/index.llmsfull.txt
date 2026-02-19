@@ -2,21 +2,25 @@
 
 {{ with .Site.Params.about }}> {{ .description }}
 {{ end }}
-{{ range $i, $p := .Site.RegularPages }}
-{{- if $i }}
+{{ $first := true }}
+{{- range .Site.RegularPages }}
+{{- if .OutputFormats.Get "markdown" }}
+{{- if not $first }}
 
 ---
 
 {{ end }}
-# {{ $p.Title }}
+{{- $first = false }}
+# {{ .Title }}
 
-- URL: {{ $p.Permalink }}
-{{- with $p.Date }}
+- URL: {{ .Permalink }}
+{{- with .Date }}
 - Date: {{ .Format "2006-01-02" }}
 {{- end }}
-{{- with $p.Params.author }}
+{{- with .Params.author }}
 - Author: {{ . }}
 {{- end }}
 
-{{ $p.RawContent }}
+{{ .RawContent }}
+{{- end }}
 {{- end }}

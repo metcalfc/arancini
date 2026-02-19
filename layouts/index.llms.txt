@@ -6,7 +6,9 @@
 
 {{ range .Site.RegularPages }}
 {{- $md := .OutputFormats.Get "markdown" }}
-- [{{ .Title }}]({{ with $md }}{{ .Permalink }}{{ end }}){{ with .Description }}: {{ . }}{{ end }}
+{{- if $md }}
+- [{{ .Title }}]({{ $md.Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
 {{- end }}
 
 ## Sections
